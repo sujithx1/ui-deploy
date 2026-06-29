@@ -84,6 +84,8 @@ export default function Dashboard() {
       const res = await fetch('/api/projects', {
         headers: { 'x-api-key': keyToUse }
       });
+
+
       if (res.ok) {
         const data = await res.json();
         setProjects(data);

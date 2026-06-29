@@ -5,6 +5,9 @@ import { NginxService } from '@/services/nginx';
 import { validateApiKey } from '@/utils/auth';
 
 export async function GET(request: NextRequest) {
+
+
+
   if (!validateApiKey(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
